@@ -1,0 +1,26 @@
+{
+  "name": "mix-master-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --use-env-proxy --use-system-ca node_modules/vite/bin/vite.js --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "node --use-env-proxy --use-system-ca node_modules/vite/bin/vite.js preview --host 0.0.0.0",
+    "test": "node --test tests/*.test.js",
+    "start": "node --use-env-proxy --use-system-ca server/index.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "@fontsource-variable/noto-sans-kr": "5.3.0",
+    "lucide-react": "1.52.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.3"
+  },
+  "engines": {
+    "node": ">=24.5.0"
+  }
+}

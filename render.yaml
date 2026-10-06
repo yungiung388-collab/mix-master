@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mix-master-studio
+    runtime: node
+    plan: free
+    repo: https://github.com/yungiung388-collab/mix-master
+    branch: "mix&master"
+    buildCommand: npm ci --no-audit --no-fund && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/status
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 24.5.0
+      - key: MIX_MASTER_AI_MODEL
+        value: gpt-4.1-mini
